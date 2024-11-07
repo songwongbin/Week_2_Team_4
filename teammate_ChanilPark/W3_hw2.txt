@@ -1,0 +1,6 @@
+Not Francis Ngannou VS John Jones
+It is John Jones VS Ciryl Gane
+fiter.opponent.getFullName() => this.fullname을 반환하는데, getFullName()은 fighter.opponent의 메서드로 호출되었으므로 this는 fighter.opponent에 바인딩된다. 따라서 fighter.opponent.fullname인 'Francis Ngannou'가 출력된다.
+fighter.getName() => this.fullname을 반환하는데, getName()은 fighter의 메서드로 호출되었으므로 this는 fighter에 바인딩된다. 따라서 fighter의 fullname인 'John Jones'가 출력된다.
+fighter.getFirstName() => this.fullName.split(' ')[0]을 반환하는데, getFirstName()은 fighter의 메서드로 호출되지만 화살표 함수로 정의되어있으므로 this는 전역 환경에 바인딩된다. 따라서 전역변수 fullname인 'Ciryl Gane'의 이름이 출력된다.
+fighter.getLaseName => function(){ ... } 을 실행한다. 내부에 정의된 function은 this.fullname.split(' ')[1]을 반환하는데, 이는 메서드로 호출되는게 아니므로 this는 전역 환경에 바인딩된다. 따라서 전역변수 fullname인 'Ciryl Gane'의 성이 출력된다.
