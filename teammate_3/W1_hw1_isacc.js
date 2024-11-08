@@ -1,2 +1,26 @@
-// 빈 스크립트 파일입니다!!
-// 본인의 파일을 채우신 후엔 삭제하시면 됩니다!!
+function distinction(s){
+    let nump =0;
+    let numy =0;
+    let answer;
+    
+    for(let i=0; i<s.length; i++){
+        if (s[i]==="p"||s[i]==="P")
+            {
+                nump++;
+            }
+        else if (s[i]==="y"||s[i]==="Y")
+            {
+                numy++;
+            }
+    }
+    
+    if (nump===numy){
+        answer=true;
+    } else{
+        answer=false;
+    }
+    return answer;
+    }
+    
+    let answer= distinction("pPyY");
+    console.log (answer);
